@@ -169,6 +169,7 @@
         android:textAppearance="@style/TextAppearance.StatusBar.EventContent.Time"
         android:textColor="@android:color/background_light"
         android:textSize="30sp"
+        android:visibility="gone"
         android:textStyle="bold" />
 
 </RelativeLayout>

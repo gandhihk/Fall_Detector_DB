@@ -279,6 +279,7 @@ public class Tab1Fragment extends Fragment implements SensorEventListener {
 
     private void startTimer()
     {
+        btnCancel.setVisibility(View.VISIBLE);
         //Initialize a new CountDownTimer instance
         new CountDownTimer(millisInFuture,countDownInterval){
             public void onTick(long millisUntilFinished){
@@ -303,6 +304,7 @@ public class Tab1Fragment extends Fragment implements SensorEventListener {
                 onSend();
                 openWhatsApp();
                 v.vibrate(1000);
+                btnCancel.setVisibility(View.GONE);
             }
 
         }.start();
@@ -360,7 +362,7 @@ public class Tab1Fragment extends Fragment implements SensorEventListener {
 
     public void onSend()
     {
-
+        SmsManager smsManager = SmsManager.getDefault();
         for(String phoneNumber: Tab2Fragment.x)
         {
             String smsMessage = "Help";
@@ -368,7 +370,6 @@ public class Tab1Fragment extends Fragment implements SensorEventListener {
             if (phoneNumber == null || phoneNumber.length() == 0 || smsMessage.length() == 0 || smsMessage == null) {
                 continue;
             }
-            SmsManager smsManager = SmsManager.getDefault();
             smsManager.sendTextMessage(phoneNumber,null, sms,null,null);
         }
         Toast.makeText(getActivity(),"SMS Sent."
@@ -404,5 +405,6 @@ public class Tab1Fragment extends Fragment implements SensorEventListener {
         isCanceled = true;
 
         tView.setText("CountDownTimer Canceled/stopped.");
+        btnCancel.setVisibility(View.GONE);
     }
 }
