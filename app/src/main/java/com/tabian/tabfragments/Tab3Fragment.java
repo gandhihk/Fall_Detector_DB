@@ -10,10 +10,6 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-/**
- * Created by User on 2/28/2017.
- */
-
 public class Tab3Fragment extends Fragment {
     private static final String TAG = "Tab3Fragment";
 
@@ -25,7 +21,7 @@ public class Tab3Fragment extends Fragment {
         View view = inflater.inflate(R.layout.tab3_fragment,container,false);
 
         String statement;
-        statement = "Falls of the elderly always lead to serious health issues as the decline of their physical fitness. Fracture is the most common injury in fall of an elderly and there is also a certain possibility to get coma, brain trauma, and paralysis. At most fall situations, the fall process is the main source of injury because of the high impact. But sometimes the late medical salvage may worsen the situation. That means the faster the salvage comes, the less risk the elderly will face.\n" +
+        statement = "Falls of the elderly always lead to serious health issues as the decline of their physical fitness. At most fall situations, the fall process is the main source of injury because of the high impact. But sometimes the late medical salvage may worsen the situation. That means the faster the salvage comes, the less risk the elderly will face.\n" +
                 "\n" +
                 "Progress of technology brings more possibilities to help us protect the elderly."+"Motion sensor-based method is also commonly used. Accelerometer and gyroscope could provide linear and angular motion information directly. Sensor measurements or their proper fusion could be used to distinguish a real fall.";
         statement = statement + "The app can detect the elderly’s falling by acceleration analysis. Then it will get the elderly’s geographic position and send fall alarm short message to caregivers. So the elderly who has fallen can get timely help to minimize the negative influence.";

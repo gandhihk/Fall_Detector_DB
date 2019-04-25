@@ -28,4 +28,20 @@
         android:textSize="16sp"
         android:layout_centerHorizontal="true" />
 
+    <Button
+        android:id="@+id/logout"
+        android:layout_width="292dp"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="61dp"
+        android:background="@android:color/holo_red_dark"
+        android:text="Logout"
+        android:textAllCaps="true"
+        android:textColor="@android:color/background_light"
+        android:textSize="30sp"
+        android:onClick="logout"
+        android:textStyle="bold" />
+
 </RelativeLayout>
